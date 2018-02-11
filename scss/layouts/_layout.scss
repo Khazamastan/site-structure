@@ -1,0 +1,22 @@
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+/* Content Container*/
+.container {
+  padding: 60px 0;
+  margin-right: auto;
+  margin-left: auto;
+  // max-width: 1170px;
+  
+}
+/* Row */
+/* Row Clear Float*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+

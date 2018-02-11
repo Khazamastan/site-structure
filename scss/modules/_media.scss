@@ -1,0 +1,67 @@
+/***************************
+Media Modules
+***************************/
+
+.doc-panel{
+  >.row{
+    height: 100%;
+  }
+}
+.doc-panel img {
+  height : 100%;
+  background-color: transparent;
+  transform: scale(1.5);
+  overflow: hidden;
+}
+
+.doc-panel .row,
+.doc-panel .col-md-6 {
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+
+.doc-panel .doc-row {
+  padding: 0 20px 0 20px;
+}
+
+.doc-panel .doc-row.doc-header {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  padding: 10px 20px 0 20px;
+}
+
+.doc-panel .doc-row.doc-header .doc-header-seperator {
+  height: 2px;
+  width: 26px;
+  background-color: #d9d9d9;
+  margin: 7px 0 7px 0;
+}
+
+.doc-panel .doc-row.doc-desc {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+.doc-panel .doc-row.doc-desc a{
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 20px;
+}
+
+.doc-info{
+  background: $brown;
+  padding: 40px 10px;
+  .fa{
+    float: left;
+  }
+  .desc{
+    float: left;
+    padding-left: 20px;
+  }
+  &:nth-child(even){
+    border-right: 1px solid $white
+  }
+}

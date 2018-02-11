@@ -1,0 +1,30 @@
+.practice-section{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    .pr-slider-container{
+        margin-top: 40px;
+        position: relative;
+        padding: 0 60px;
+    }
+    .bg-image{
+        min-height: 180px;
+    }
+    .swiper-container{
+        position: static;
+    }
+    .swiper-button-prev {
+        position: absolute;
+        left: 0px;
+        top : 50%;
+        width: 25px;
+        height: 18px;
+    }
+    .swiper-button-next {
+        position: absolute;
+        right: 0px;
+        top : 50%;
+        width: 25px;
+        height: 18px;
+    }
+}

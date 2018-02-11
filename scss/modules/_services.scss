@@ -1,0 +1,23 @@
+.services{
+    .service-container{
+        margin-top: 40px;        
+        .service{
+            border : 2px solid $border_dark_color;
+            border-radius : 100%;
+            padding: 20px;
+            .bg-content{
+                background: #0000006b;
+                strong{
+                  @extend .color-white;
+                }
+                @extend .column;
+              }
+            &:hover{
+              .bg-content{
+                background: #000000bf;
+              }
+              border : 2px solid $orange;
+            }
+        }
+    }
+}

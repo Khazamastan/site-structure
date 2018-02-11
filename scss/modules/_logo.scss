@@ -1,0 +1,23 @@
+/***************************
+Logo Modules
+***************************/
+@import "../base/_media-queries.scss";
+@import "../base/_variables.scss";
+.logo {
+  overflow: hidden;
+  display: inline-block;
+}
+.logo-primary {
+  width: 215px;
+  height: 56px;
+  background-color: $white; 
+  @include small-and-above {
+    width: 215px;
+    height: 56px;
+    background-color: $white;
+    float: left;
+  }
+}
+.logo-primary img {
+  height: 100%;
+}

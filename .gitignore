@@ -1,0 +1,4 @@
+node_modules/
+.sass-cache/
+.vscode/
+bs4-nodejs-static/

@@ -1,0 +1,13 @@
+@import "./base/variables";
+
+.swiper-container{
+    &.swiper-container-horizontal > .swiper-pagination-bullets {
+        .swiper-pagination-bullet{
+          margin: 0 6px;
+          background: $pagination-bullet-bg;
+        }
+        .swiper-pagination-bullet-active{
+            background: $white;
+        }
+    }
+}

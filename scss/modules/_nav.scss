@@ -1,0 +1,38 @@
+/***************************
+Nav Modules
+***************************/
+@import "../base/_media-queries.scss";
+.nav > ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.nav-primary {
+  margin-top: 28px;
+  @include small-and-above {
+    float: right;
+    width: 60%;
+    text-align: right;
+    margin-top: 0px;
+    li {
+      display: inline-block;
+      flex : 1;
+        .btn-nav.last{
+          border-right: 0px;
+        }
+      &:last-child{
+        flex : 0;
+      }
+      .btn{
+        text-transform: uppercase;
+      }
+    }
+    .btn-primary{
+      width: 280px;
+      font-size: 0.9rem;
+      padding: 18px 30px;
+    }
+  }
+}

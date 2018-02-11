@@ -1,0 +1,19 @@
+/***************************
+Header
+***************************/
+@import "../base/_media-queries.scss";
+.header-primary {
+  background: #9B8579;
+  text-align: center;
+  @include small-and-above {
+    background: none;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}

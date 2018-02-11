@@ -1,0 +1,39 @@
+/***************************
+Bg-Image Modules
+***************************/
+.bg-image  {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+ > img {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+ }
+  .occupy{
+    width: 100%;
+    height: 100%;
+  }
+  .contain{
+    max-width: 70%;
+    max-height: 100%;
+  }
+  .occupy-y{
+    height: 100%;
+  }
+  .occupy-x{
+    width: 100%;
+  }
+  .bg-content{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    @extend .content-center;
+  }
+}

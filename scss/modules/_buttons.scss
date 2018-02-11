@@ -1,0 +1,47 @@
+/***************************
+Button Modules
+***************************/
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  font-size: 0.8rem;
+  padding: 8px 20px;
+}
+
+.btn-primary {
+  background: $btn-primary-bg;
+}
+
+.btn-nav {
+  display: block;
+  padding: 20px 30px;
+  font-size: 0.7rem;
+  color: white;
+  background-color: rgba(86, 88, 68, 0.7);
+  border-right : 1px solid  $nav-link-border-color;
+  &:hover, &.active{
+    border-bottom: 3px solid $btn-primary-bg;
+  }
+}
+
+.btn-black{
+  background-color: $black;
+}
+
+.btn-yellow{
+  background-color: $btn-primary-bg;
+}
+
+.btn-white{
+  background-color: $white;
+}
+
+
