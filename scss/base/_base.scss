@@ -59,3 +59,10 @@ p{
 iframe{
   border : 0px;
 }
+
+input.form-control{
+  font-size: 13px;
+  padding: 8px 20px;
+  border: 0px;
+  @extend .color-light;
+}

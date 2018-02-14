@@ -34,6 +34,9 @@ Button Modules
 
 .btn-black{
   background-color: $black;
+  &:hover{
+    background: $btn-primary-bg;
+  }
 }
 
 .btn-yellow{

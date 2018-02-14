@@ -8,9 +8,13 @@ Nav Modules
   list-style: none;
   padding: 0px;
   margin: 0px;
+  @media (max-width: 767px) {
+   flex-wrap: wrap; 
+   flex : 1;
+   min-width: 100%;
+  }
 }
 .nav-primary {
-  margin-top: 28px;
   @include small-and-above {
     float: right;
     width: 60%;
@@ -33,6 +37,35 @@ Nav Modules
       width: 280px;
       font-size: 0.9rem;
       padding: 18px 30px;
+    }
+  }
+}
+.fas.fa-bars.toggle-nav{
+  display: none;
+}
+.header-container{
+  @media (max-width: 767px) {
+    .logo-primary{
+      flex : 1;
+      min-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
+      align-items: center; 
+      .fas{
+        font-size : 24px;
+        align-items: center;
+      }
+    }
+    flex-wrap: wrap; 
+    .nav{
+      display: none;
+    }
+    .nav > ul  > li{ 
+      min-width: 100%;
+      .book-online{
+        width : 100%;
+      }
     }
   }
 }

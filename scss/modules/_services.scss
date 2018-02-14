@@ -2,9 +2,7 @@
     .service-container{
         margin-top: 40px;        
         .service{
-            border : 2px solid $border_dark_color;
-            border-radius : 100%;
-            padding: 20px;
+            @extend .circle-image;
             .bg-content{
                 background: #0000006b;
                 strong{

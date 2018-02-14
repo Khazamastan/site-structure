@@ -518,164 +518,11 @@ iframe {
   border: 0px;
 }
 
-/* line 1, ../scss/base/_util.scss */
-.mt-5 {
-  margin-top: 5px;
-}
-
-/* line 4, ../scss/base/_util.scss */
-.mt-10 {
-  margin-top: 10px !important;
-}
-
-/* line 7, ../scss/base/_util.scss */
-.mt-20 {
-  margin-top: 20px;
-}
-
-/* line 11, ../scss/base/_util.scss */
-.mt-30 {
-  margin-top: 30px;
-}
-
-/* line 15, ../scss/base/_util.scss */
-.mt-40 {
-  margin-top: 40px;
-}
-
-/* line 19, ../scss/base/_util.scss */
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-/* line 23, ../scss/base/_util.scss */
-.mr-40 {
-  margin-right: 40px;
-}
-
-/* line 26, ../scss/base/_util.scss */
-.square {
-  position: relative;
-}
-/* line 28, ../scss/base/_util.scss */
-.square:after {
-  content: '';
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 100%;
-}
-
-/* line 36, ../scss/base/_util.scss */
-.square-50 {
-  position: relative;
-}
-/* line 38, ../scss/base/_util.scss */
-.square-50:after {
-  content: '';
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 50%;
-}
-
-/* line 47, ../scss/base/_util.scss */
-.square-133 {
-  position: relative;
-}
-/* line 49, ../scss/base/_util.scss */
-.square-133:after {
-  content: '';
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 133%;
-}
-
-/* line 58, ../scss/base/_util.scss */
-.square-70 {
-  position: relative;
-}
-/* line 60, ../scss/base/_util.scss */
-.square-70:after {
-  content: '';
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 70%;
-}
-
-/* line 70, ../scss/base/_util.scss */
-.flex {
-  display: flex;
-}
-
-/* line 73, ../scss/base/_util.scss */
-.text-center {
-  text-align: center;
-}
-
-/* line 77, ../scss/base/_util.scss */
-.content-center, .bg-image .bg-content {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* line 83, ../scss/base/_util.scss */
-.content-center-y {
-  display: inline-flex;
-  align-items: center;
-}
-
-/* line 88, ../scss/base/_util.scss */
-.column, .services .service-container .service .bg-content {
-  flex-direction: column;
-}
-
-/* line 92, ../scss/base/_util.scss */
-.bold, .list > li {
-  font-weight: 700;
-}
-
-/* line 96, ../scss/base/_util.scss */
-.fw-600 {
-  font-weight: 600;
-}
-
-/* line 100, ../scss/base/_util.scss */
-.fw-400 {
-  font-weight: 400;
-}
-
-/* line 105, ../scss/base/_util.scss */
-.no-padding {
-  padding: 0px !important;
-}
-
-/* line 111, ../scss/base/_util.scss */
-.pull-left {
-  float: left;
-}
-
-/* line 115, ../scss/base/_util.scss */
-.pull-right {
-  float: right;
-}
-
-/* line 120, ../scss/base/_util.scss */
-.fs-14 {
-  font-size: 14px;
-}
-
-/* line 123, ../scss/base/_util.scss */
-.fs-16 {
-  font-size: 16px;
-}
-
-/* line 127, ../scss/base/_util.scss */
-.d-inb {
-  display: inline-block;
+/* line 63, ../scss/base/_base.scss */
+input.form-control {
+  font-size: 13px;
+  padding: 8px 20px;
+  border: 0px;
 }
 
 /***************************
@@ -689,14 +536,20 @@ Layout Styles
 /* Content Container*/
 /* line 7, ../scss/layouts/_layout.scss */
 .container {
-  padding: 60px 0;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 30px 0;
+}
+@media only screen and (min-width: 48em) {
+  /* line 7, ../scss/layouts/_layout.scss */
+  .container {
+    margin-left: auto;
+    padding: 60px 0;
+    margin-right: auto;
+  }
 }
 
 /* Row */
 /* Row Clear Float*/
-/* line 16, ../scss/layouts/_layout.scss */
+/* line 19, ../scss/layouts/_layout.scss */
 .row:after {
   content: "";
   display: table;
@@ -837,13 +690,17 @@ Button Modules
 .btn-black {
   background-color: #333;
 }
+/* line 37, ../scss/modules/_buttons.scss */
+.btn-black:hover {
+  background: #d0a43f;
+}
 
-/* line 39, ../scss/modules/_buttons.scss */
+/* line 42, ../scss/modules/_buttons.scss */
 .btn-yellow {
   background-color: #d0a43f;
 }
 
-/* line 43, ../scss/modules/_buttons.scss */
+/* line 46, ../scss/modules/_buttons.scss */
 .btn-white {
   background-color: #FFF;
 }
@@ -886,12 +743,16 @@ Header
   }
 }
 
-/* line 5, ../scss/modules/_slide.scss */
+/* line 3, ../scss/modules/_slide.scss */
+.swiper-container {
+  width: 100%;
+}
+/* line 6, ../scss/modules/_slide.scss */
 .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 6px;
   background: #747268;
 }
-/* line 9, ../scss/modules/_slide.scss */
+/* line 10, ../scss/modules/_slide.scss */
 .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
   background: #FFF;
 }
@@ -924,7 +785,6 @@ Hero Modules
   color: white;
   padding-top: 25px;
   padding-bottom: 25px;
-  height: 100vh;
 }
 @media only screen and (min-width: 48em) {
   /* line 18, ../scss/modules/_hero.scss */
@@ -934,19 +794,27 @@ Hero Modules
     align-items: center;
   }
 }
-/* line 29, ../scss/modules/_hero.scss */
+/* line 28, ../scss/modules/_hero.scss */
 .hero-primary .hero-sub-title {
   font-size: 1.1rem;
 }
 
-/* line 34, ../scss/modules/_hero.scss */
+/* line 33, ../scss/modules/_hero.scss */
 .hero-body {
   position: relative;
 }
 
-/* line 37, ../scss/modules/_hero.scss */
+/* line 36, ../scss/modules/_hero.scss */
 h4 + button {
   margin-top: 25px;
+}
+
+/* line 39, ../scss/modules/_hero.scss */
+.top-contact {
+  position: absolute;
+  top: 81px;
+  right: 0;
+  z-index: 9999999;
 }
 
 /***************************
@@ -1043,21 +911,27 @@ Media Modules
 
 /* line 54, ../scss/modules/_media.scss */
 .doc-info {
-  background: #efe9db;
   padding: 40px 10px;
 }
-/* line 57, ../scss/modules/_media.scss */
+/* line 56, ../scss/modules/_media.scss */
 .doc-info .fa {
   float: left;
 }
-/* line 60, ../scss/modules/_media.scss */
+/* line 59, ../scss/modules/_media.scss */
 .doc-info .desc {
   float: left;
   padding-left: 20px;
 }
-/* line 64, ../scss/modules/_media.scss */
+/* line 63, ../scss/modules/_media.scss */
 .doc-info:nth-child(even) {
   border-right: 1px solid #FFF;
+}
+
+/* line 67, ../scss/modules/_media.scss */
+.circle-image, .services .service-container .service {
+  border: 2px solid #5c5b5c;
+  border-radius: 100%;
+  padding: 20px;
 }
 
 /***************************
@@ -1074,41 +948,83 @@ Nav Modules
   padding: 0px;
   margin: 0px;
 }
-
-/* line 12, ../scss/modules/_nav.scss */
-.nav-primary {
-  margin-top: 28px;
+@media (max-width: 767px) {
+  /* line 5, ../scss/modules/_nav.scss */
+  .nav > ul {
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 100%;
+  }
 }
+
 @media only screen and (min-width: 48em) {
-  /* line 12, ../scss/modules/_nav.scss */
+  /* line 17, ../scss/modules/_nav.scss */
   .nav-primary {
     float: right;
     width: 60%;
     text-align: right;
     margin-top: 0px;
   }
-  /* line 19, ../scss/modules/_nav.scss */
+  /* line 23, ../scss/modules/_nav.scss */
   .nav-primary li {
     display: inline-block;
     flex: 1;
   }
-  /* line 22, ../scss/modules/_nav.scss */
+  /* line 26, ../scss/modules/_nav.scss */
   .nav-primary li .btn-nav.last {
     border-right: 0px;
   }
-  /* line 25, ../scss/modules/_nav.scss */
+  /* line 29, ../scss/modules/_nav.scss */
   .nav-primary li:last-child {
     flex: 0;
   }
-  /* line 28, ../scss/modules/_nav.scss */
+  /* line 32, ../scss/modules/_nav.scss */
   .nav-primary li .btn {
     text-transform: uppercase;
   }
-  /* line 32, ../scss/modules/_nav.scss */
+  /* line 36, ../scss/modules/_nav.scss */
   .nav-primary .btn-primary {
     width: 280px;
     font-size: 0.9rem;
     padding: 18px 30px;
+  }
+}
+
+/* line 43, ../scss/modules/_nav.scss */
+.fas.fa-bars.toggle-nav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* line 46, ../scss/modules/_nav.scss */
+  .header-container {
+    flex-wrap: wrap;
+  }
+  /* line 48, ../scss/modules/_nav.scss */
+  .header-container .logo-primary {
+    flex: 1;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    align-items: center;
+  }
+  /* line 55, ../scss/modules/_nav.scss */
+  .header-container .logo-primary .fas {
+    font-size: 24px;
+    align-items: center;
+  }
+  /* line 61, ../scss/modules/_nav.scss */
+  .header-container .nav {
+    display: none;
+  }
+  /* line 64, ../scss/modules/_nav.scss */
+  .header-container .nav > ul > li {
+    min-width: 100%;
+  }
+  /* line 66, ../scss/modules/_nav.scss */
+  .header-container .nav > ul > li .book-online {
+    width: 100%;
   }
 }
 
@@ -1169,59 +1085,65 @@ Nav Modules
 /* line 1, ../scss/modules/_practice.scss */
 .practice-section {
   text-align: center;
-  width: 70%;
-  margin: auto;
 }
-/* line 5, ../scss/modules/_practice.scss */
+@media only screen and (min-width: 48em) {
+  /* line 1, ../scss/modules/_practice.scss */
+  .practice-section {
+    width: 70%;
+    margin: auto;
+  }
+  /* line 6, ../scss/modules/_practice.scss */
+  .practice-section .pr-slider-container {
+    position: relative;
+    padding: 0 60px;
+  }
+}
+/* line 11, ../scss/modules/_practice.scss */
 .practice-section .pr-slider-container {
   margin-top: 40px;
-  position: relative;
-  padding: 0 60px;
 }
-/* line 10, ../scss/modules/_practice.scss */
-.practice-section .bg-image {
-  min-height: 180px;
-}
-/* line 13, ../scss/modules/_practice.scss */
+/* line 17, ../scss/modules/_practice.scss */
 .practice-section .swiper-container {
   position: static;
 }
-/* line 16, ../scss/modules/_practice.scss */
+/* line 20, ../scss/modules/_practice.scss */
 .practice-section .swiper-button-prev {
+  display: none;
   position: absolute;
   left: 0px;
   top: 50%;
   width: 25px;
   height: 18px;
 }
-/* line 23, ../scss/modules/_practice.scss */
+/* line 28, ../scss/modules/_practice.scss */
 .practice-section .swiper-button-next {
+  display: none;
   position: absolute;
   right: 0px;
   top: 50%;
   width: 25px;
   height: 18px;
 }
+@media only screen and (min-width: 48em) {
+  /* line 37, ../scss/modules/_practice.scss */
+  .practice-section .swiper-button-prev, .practice-section .swiper-button-next {
+    display: block;
+  }
+}
 
 /* line 2, ../scss/modules/_services.scss */
 .services .service-container {
   margin-top: 40px;
 }
-/* line 4, ../scss/modules/_services.scss */
-.services .service-container .service {
-  border: 2px solid #5c5b5c;
-  border-radius: 100%;
-  padding: 20px;
-}
-/* line 8, ../scss/modules/_services.scss */
+/* line 6, ../scss/modules/_services.scss */
 .services .service-container .service .bg-content {
   background: #0000006b;
 }
-/* line 15, ../scss/modules/_services.scss */
+/* line 13, ../scss/modules/_services.scss */
 .services .service-container .service:hover {
   border: 2px solid #F7941E;
 }
-/* line 16, ../scss/modules/_services.scss */
+/* line 14, ../scss/modules/_services.scss */
 .services .service-container .service:hover .bg-content {
   background: #000000bf;
 }
@@ -1238,15 +1160,17 @@ Nav Modules
 }
 
 /* line 2, ../scss/modules/_footer.scss */
-footer a {
+a {
   text-decoration: none;
 }
+
 /* line 5, ../scss/modules/_footer.scss */
-footer .bg-image {
+.bg-image {
   position: relative;
 }
+
 /* line 8, ../scss/modules/_footer.scss */
-footer .map-content {
+.map-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -1255,48 +1179,47 @@ footer .map-content {
   padding-top: 60px;
   transition: 0.1s all ease-in;
 }
-/* line 16, ../scss/modules/_footer.scss */
-footer .map-content .bg-content {
+/* line 17, ../scss/modules/_footer.scss */
+.map-content .bg-content {
   align-items: flex-start !important;
 }
-/* line 19, ../scss/modules/_footer.scss */
-footer .map-content .timings {
-  padding: 20px 20px;
-}
-/* line 21, ../scss/modules/_footer.scss */
-footer .map-content .timings p {
+/* line 22, ../scss/modules/_footer.scss */
+.map-content .timings p {
   margin: 0;
 }
-/* line 25, ../scss/modules/_footer.scss */
-footer .map-content:hover {
+/* line 26, ../scss/modules/_footer.scss */
+.map-content:not(.no-hover):hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 28, ../scss/modules/_footer.scss */
-footer .map-content:hover .bg-content h4, footer .map-content:hover .bg-content button {
+/* line 29, ../scss/modules/_footer.scss */
+.map-content:not(.no-hover):hover .bg-content h4, .map-content:not(.no-hover):hover .bg-content button {
   color: #FFF;
 }
-/* line 31, ../scss/modules/_footer.scss */
-footer .map-content:hover .bg-content strong {
+/* line 32, ../scss/modules/_footer.scss */
+.map-content:not(.no-hover):hover .bg-content strong {
   color: #e7e1d7;
 }
-/* line 34, ../scss/modules/_footer.scss */
-footer .map-content:hover .bg-content button {
+/* line 35, ../scss/modules/_footer.scss */
+.map-content:not(.no-hover):hover .bg-content button {
   background-color: #F7941E;
 }
-/* line 42, ../scss/modules/_footer.scss */
-footer ul.social-network {
+
+/* line 43, ../scss/modules/_footer.scss */
+ul.social-network {
   list-style: none;
   display: inline;
   margin-left: 0 !important;
   padding: 0;
 }
-/* line 48, ../scss/modules/_footer.scss */
-footer ul.social-network li {
+
+/* line 49, ../scss/modules/_footer.scss */
+ul.social-network li {
   display: inline;
   margin: 0 5px;
 }
-/* line 53, ../scss/modules/_footer.scss */
-footer .social-circle li a {
+
+/* line 54, ../scss/modules/_footer.scss */
+.social-circle li a {
   display: inline-block;
   position: relative;
   margin: 0 auto 0 auto;
@@ -1304,12 +1227,301 @@ footer .social-circle li a {
   margin-right: 10px;
   font-size: 16px;
 }
-/* line 61, ../scss/modules/_footer.scss */
-footer .social-circle li i {
+
+/* line 62, ../scss/modules/_footer.scss */
+.social-circle li i {
   margin: 0;
   line-height: 50px;
   text-align: center;
   color: #999;
+}
+
+/* line 2, ../scss/modules/_modal.scss */
+.modal .close {
+  right: -20px;
+  top: -20px;
+  background-color: #fff;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  /* padding: 20px; */
+  opacity: 1;
+  z-index: 99999999;
+  border: 1px solid #333;
+}
+/* line 15, ../scss/modules/_modal.scss */
+.modal .modal-dialog {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  /* line 22, ../scss/modules/_modal.scss */
+  .modal .modal-dialog {
+    min-height: calc(100vh - 20px);
+  }
+}
+/* line 26, ../scss/modules/_modal.scss */
+.modal .modal-container {
+  display: flex;
+}
+/* line 28, ../scss/modules/_modal.scss */
+.modal .modal-container .back {
+  cursor: pointer;
+  min-width: 50px;
+}
+/* line 31, ../scss/modules/_modal.scss */
+.modal .modal-container .back .fas {
+  font-size: 26px;
+}
+/* line 35, ../scss/modules/_modal.scss */
+.modal .modal-container .left-content {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+/* line 41, ../scss/modules/_modal.scss */
+.modal #chooseLocation > div {
+  border-right: 2px solid #fff;
+}
+/* line 43, ../scss/modules/_modal.scss */
+.modal #chooseLocation > div:last-child {
+  border-right: 0px;
+}
+/* line 48, ../scss/modules/_modal.scss */
+.modal #done {
+  min-height: 320px;
+}
+
+/* line 2, ../scss/base/_util.scss */
+.mt-5 {
+  margin-top: 5px;
+}
+
+/* line 5, ../scss/base/_util.scss */
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+/* line 8, ../scss/base/_util.scss */
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* line 12, ../scss/base/_util.scss */
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* line 16, ../scss/base/_util.scss */
+.mt-40 {
+  margin-top: 40px;
+}
+
+/* line 20, ../scss/base/_util.scss */
+.mt-60 {
+  margin-top: 60px;
+}
+
+/* line 24, ../scss/base/_util.scss */
+.mt-80 {
+  margin-top: 80px;
+}
+
+/* line 28, ../scss/base/_util.scss */
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* line 31, ../scss/base/_util.scss */
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+/* line 34, ../scss/base/_util.scss */
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+/* line 38, ../scss/base/_util.scss */
+.mr-40 {
+  margin-right: 40px;
+}
+
+/* line 42, ../scss/base/_util.scss */
+pt-10 {
+  padding-top: 10px;
+}
+
+/* line 46, ../scss/base/_util.scss */
+pt-20 {
+  padding-top: 20px;
+}
+
+/* line 50, ../scss/base/_util.scss */
+.pt-30 {
+  padding-top: 30px;
+}
+
+/* line 53, ../scss/base/_util.scss */
+.pt-40 {
+  padding-top: 40px;
+}
+
+/* line 56, ../scss/base/_util.scss */
+.pt-0 {
+  padding-top: 0px !important;
+}
+
+/* line 59, ../scss/base/_util.scss */
+.square {
+  position: relative;
+}
+/* line 61, ../scss/base/_util.scss */
+.square:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 69, ../scss/base/_util.scss */
+.square-50 {
+  position: relative;
+}
+/* line 71, ../scss/base/_util.scss */
+.square-50:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 50%;
+}
+
+/* line 80, ../scss/base/_util.scss */
+.square-133 {
+  position: relative;
+}
+/* line 82, ../scss/base/_util.scss */
+.square-133:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 133%;
+}
+
+/* line 91, ../scss/base/_util.scss */
+.square-150 {
+  position: relative;
+}
+/* line 93, ../scss/base/_util.scss */
+.square-150:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 150%;
+}
+
+/* line 102, ../scss/base/_util.scss */
+.square-70 {
+  position: relative;
+}
+/* line 104, ../scss/base/_util.scss */
+.square-70:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 70%;
+}
+
+/* line 114, ../scss/base/_util.scss */
+.flex {
+  display: flex;
+}
+
+/* line 117, ../scss/base/_util.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 121, ../scss/base/_util.scss */
+.content-center, .bg-image .bg-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 127, ../scss/base/_util.scss */
+.content-center-y {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* line 132, ../scss/base/_util.scss */
+.column, .services .service-container .service .bg-content {
+  flex-direction: column;
+}
+
+/* line 136, ../scss/base/_util.scss */
+.bold, .list > li {
+  font-weight: 700;
+}
+
+/* line 140, ../scss/base/_util.scss */
+.fw-600 {
+  font-weight: 600;
+}
+
+/* line 144, ../scss/base/_util.scss */
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+/* line 149, ../scss/base/_util.scss */
+.no-padding {
+  padding: 0px !important;
+}
+
+/* line 155, ../scss/base/_util.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 159, ../scss/base/_util.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 164, ../scss/base/_util.scss */
+.fs-14 {
+  font-size: 14px;
+}
+
+/* line 167, ../scss/base/_util.scss */
+.fs-16 {
+  font-size: 16px;
+}
+
+/* line 171, ../scss/base/_util.scss */
+.d-inb {
+  display: inline-block;
+}
+
+/* line 175, ../scss/base/_util.scss */
+.relative {
+  position: relative !important;
+}
+
+/* line 179, ../scss/base/_util.scss */
+.align-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 /***************************
@@ -1341,7 +1553,7 @@ Theme Styles
 }
 
 /* line 23, ../scss/themes/_theme.scss */
-.color-light {
+.color-light, input.form-control {
   color: #bfbfbf;
 }
 

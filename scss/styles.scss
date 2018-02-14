@@ -6,7 +6,6 @@ Reset and Base Imports
 @import "base/_normalize";
 @import "base/_media-queries";
 @import "base/_base";
-@import "base/_util";
 
 /***************************
 Layout Imports
@@ -33,6 +32,8 @@ Module Imports
 @import "modules/_list";
 @import "modules/_blog";
 @import "modules/_footer";
+@import "modules/_modal"; 
+@import "base/_util";
 
 /***************************
 Theme Imports

@@ -1,19 +1,24 @@
 .practice-section{
     text-align: center;
-    width: 70%;
-    margin: auto;
+    @include small-and-above {
+        width: 70%;
+        margin: auto;
+        .pr-slider-container{
+            position: relative;
+            padding: 0 60px;
+        }
+    }
     .pr-slider-container{
         margin-top: 40px;
-        position: relative;
-        padding: 0 60px;
     }
     .bg-image{
-        min-height: 180px;
+        // min-height: 180px;
     }
     .swiper-container{
         position: static;
     }
     .swiper-button-prev {
+        display: none;
         position: absolute;
         left: 0px;
         top : 50%;
@@ -21,10 +26,16 @@
         height: 18px;
     }
     .swiper-button-next {
+        display: none;
         position: absolute;
         right: 0px;
         top : 50%;
         width: 25px;
         height: 18px;
+    }
+    @include small-and-above {
+        .swiper-button-prev,.swiper-button-next {
+            display: block;
+        }
     }
 }

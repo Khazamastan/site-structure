@@ -1,5 +1,6 @@
 $(window).on("load", function(){
   w3.includeHTML(function(){
+    // $('#choose-location').modal({show : true});
     var current = location.pathname;
     if(current !="/"){
       $('.nav a').each(function(){
@@ -17,7 +18,9 @@ $(window).on("load", function(){
         clickable : true
       }
     })
+    var onBackClick = function(){
 
+    }
     var practiceSwiper = new Swiper ('#practice-slider', {
       pagination: {
         el: '.swiper-pagination',
@@ -28,18 +31,37 @@ $(window).on("load", function(){
         prevEl: '.swiper-button-prev',
       }
     })
-    $('.book-online').on('click', function(){
-      $('#choose-location').modal({show : true});
+    $('body').on('click','.toggle-nav', function(){
+      $('.navbarItems').toggle();
     });
 
-    $(document).on('choose-doctors', function(){
-      $('#choose-doctor').modal({show : true});
+    var triggers = ['.book-online','.choose-doctor', '.book-appointment', '.request-done' ]
+    var ids = ['#chooseLocation', '#chooseDoctor', '#bookappointment', '#done'];
+    var idx = 0;
+    triggers.forEach(function(trigger,i){
+      $('body').on('click',trigger, function(){
+        if(i < 1){
+          $('#choose-location').modal({show : true});
+        }
+        idx = i;
+        var showBack = (i!=0 & i!=(ids.length-1))
+        showModalItem(ids[i], showBack);
+      });
     })
-    $(document).on('book-appointment', function(){
-      $('#book-appointment').modal({show : true});
+
+
+    $('.modal .back').on('click', function(){
+      showModalItem(ids[idx-1], ((idx-1)!=0))
     })
-    $(document).on('done', function(){
-      $('#done').modal({show : true});
-    })
+
+    function showModalItem(item, back){
+      $('.modal .item').hide();
+      $(item).show();
+      if(back){
+        $('.modal .back').show();
+      }else{
+        $('.modal .back').hide();
+      }
+    }
   });
 });

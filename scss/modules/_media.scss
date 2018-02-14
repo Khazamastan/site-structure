@@ -52,7 +52,6 @@ Media Modules
 }
 
 .doc-info{
-  background: $brown;
   padding: 40px 10px;
   .fa{
     float: left;
@@ -64,4 +63,9 @@ Media Modules
   &:nth-child(even){
     border-right: 1px solid $white
   }
+}
+.circle-image{
+  border : 2px solid $border_dark_color;
+  border-radius : 100%;
+  padding: 20px;
 }
